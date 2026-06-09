@@ -230,6 +230,13 @@ export default function App() {
             >
               // Team
             </button>
+            <Link
+              to="/founding-team"
+              onClick={() => setMobMenuOpen(false)}
+              className="block w-full text-left py-2 text-brand hover:text-white border-b border-dark-border/40 pb-1"
+            >
+  // Join Foundation
+            </Link>
             <button
               id="mob-cta-book"
               onClick={() => {
