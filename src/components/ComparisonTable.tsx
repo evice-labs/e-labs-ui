@@ -69,7 +69,7 @@ export default function ComparisonTable() {
             <th className="p-4 pl-6 font-medium">Metric</th>
             <th className="p-4 font-semibold text-brand bg-brand/5 border-x border-dark-border flex items-center space-x-2">
               <ShieldCheck className="w-4 h-4 text-brand animate-pulse" />
-              <span>Nullifier Labs</span>
+              <span>Evice Labs</span>
             </th>
             <th className="p-4 font-medium text-gray-500">Generalists & Agencies</th>
           </tr>
@@ -91,7 +91,7 @@ export default function ComparisonTable() {
                 {row.category}
               </td>
 
-              {/* Nullifier column (Highlighted) */}
+              {/* Evice column (Highlighted) */}
               <td className="p-4 text-sm text-white font-medium bg-brand/5 border-x border-dark-border/60">
                 <div className="flex items-center space-x-2.5">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-brand/10 border border-brand/35 flex items-center justify-center">

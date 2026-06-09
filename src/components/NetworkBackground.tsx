@@ -25,7 +25,7 @@ export default function NetworkBackground() {
   const hashList = [
     '0x72a...8c1', 'sBPF::exec', 'RISC0::proof', 'Groth16::verify',
     'BN254::G1', 'LEZ::state', '0x3d4...99a', 'witness::eval',
-    'image_id::0xfe', 'nullifier::null', '0x90f...b23', 'λPrize::winner'
+    'image_id::0xfe', 'Evice::null', '0x90f...b23', 'λPrize::winner'
   ];
 
   // Keep track of dimensions with ResizeObserver

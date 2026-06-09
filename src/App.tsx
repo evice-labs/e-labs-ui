@@ -119,7 +119,7 @@ export default function App() {
               <ShieldCheck className="w-5 h-5 text-brand" />
             </div>
             <span className="font-display font-bold text-white tracking-tight text-lg group-hover:text-brand transition-colors">
-              Nullifier<span className="text-brand font-mono font-normal">Labs</span>
+              Evice<span className="text-brand font-mono font-normal">Labs</span>
             </span>
           </div>
 
@@ -489,14 +489,14 @@ export default function App() {
               <ShieldCheck className="w-4 h-4 text-brand" />
             </div>
             <span className="font-display font-bold text-white text-base tracking-tight">
-              Nullifier<span className="text-brand font-mono font-normal">Labs</span>
+              Evice<span className="text-brand font-mono font-normal">Labs</span>
             </span>
           </div>
 
           {/* Core coordinate anchors */}
           <div className="flex flex-wrap justify-center gap-6 font-mono text-xs text-gray-400">
             <a
-              href="https://github.com/nullifier-labs"
+              href="https://github.com/Evice-labs"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors flex items-center space-x-1"
@@ -505,7 +505,7 @@ export default function App() {
               <ArrowUpRight className="w-3 h-3 text-gray-500" />
             </a>
             <a
-              href="https://x.com/nullifier_labs"
+              href="https://x.com/Evice_labs"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors flex items-center space-x-1"
@@ -514,7 +514,7 @@ export default function App() {
               <ArrowUpRight className="w-3 h-3 text-gray-500" />
             </a>
             <a
-              href="mailto:hello@nullifier.dev"
+              href="mailto:hello@Evice.dev"
               className="hover:text-white transition-colors flex items-center space-x-1"
             >
               <span>Email</span>
@@ -524,7 +524,7 @@ export default function App() {
 
           {/* Copy statement */}
           <div className="text-xs font-mono text-gray-600">
-            © 2026 Nullifier Labs &middot; SECURE SYSTEM L1S
+            © 2026 Evice Labs &middot; SECURE SYSTEM L1S
           </div>
 
         </div>

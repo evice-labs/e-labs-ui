@@ -71,7 +71,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           setLogs((l) => [
             ...l,
             `[KEY] Generated proposal ticket: ${hashGenerated}`,
-            `[OK] Signature sealed successfully. Target email set to hello@nullifier.dev`
+            `[OK] Signature sealed successfully. Target email set to hello@Evice.dev`
           ]);
         } else if (next === 5) {
           clearInterval(interval);
@@ -89,7 +89,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          
+
           {/* Backdrop screen */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -129,7 +129,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
             {/* Content area */}
             <div className="p-6 overflow-y-auto max-h-[82vh] font-sans">
-              
+
               {!submitting && !submitted && (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="text-xs text-gray-400 leading-relaxed mb-1">
@@ -295,15 +295,15 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-500">Email:</span>
-                        <a href="mailto:hello@nullifier.dev" className="text-brand hover:underline">hello@nullifier.dev</a>
+                        <a href="mailto:hello@Evice.dev" className="text-brand hover:underline">hello@Evice.dev</a>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-500">Telegram:</span>
-                        <a href="https://t.me/nullifier_labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">t.me/nullifier_labs</a>
+                        <a href="https://t.me/Evice_labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">t.me/Evice_labs</a>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-500">Calendly link:</span>
-                        <a href="https://calendly.com/nullifier-labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Book immediate time slot</a>
+                        <a href="https://calendly.com/Evice-labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Book immediate time slot</a>
                       </div>
                     </div>
                   </div>

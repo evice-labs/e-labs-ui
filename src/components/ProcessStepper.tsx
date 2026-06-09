@@ -16,7 +16,7 @@ const steps: ProcessStep[] = [
     description: 'We read the spec and the source before we write anything. You get a clear plan with mathematically bounded invariants, not a hand-waving approximation.',
     codeSnippet: `# 1. Scoping Protocol Constraints
 confidential_state:
-  pda_owner: "0xNullifierLabs"
+  pda_owner: "0xEviceLabs"
   curve: "BN254"
   verification_gates:
     - groth16_verify
@@ -49,7 +49,7 @@ pub enum VerificationPath {
     title: 'Build in the Open',
     description: 'Tests stay green at every commit. You see actual commits land in real-time, matching scoped milestone targets closely on your repository logs.',
     codeSnippet: `$ cargo test --package lambda-shield
-   Compiling lambda-shield v0.1.0 (nullifier-labs)
+   Compiling lambda-shield v0.1.0 (Evice-labs)
     Finished test [unoptimized + debuginfo] target(s)
      Running unittests src/lib.rs
 
@@ -100,7 +100,7 @@ export default function ProcessStepper() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start font-sans">
-      
+
       {/* Timeline Controls (Left 2 Columns) */}
       <div className="lg:col-span-2 space-y-3">
         {steps.map((step) => {
@@ -109,17 +109,15 @@ export default function ProcessStepper() {
             <div
               key={step.id}
               onClick={() => setActiveStep(step.id)}
-              className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer flex items-start space-x-4 select-none ${
-                isActive
+              className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer flex items-start space-x-4 select-none ${isActive
                   ? 'bg-brand/10 border-brand/50 shadow-md shadow-brand/5'
                   : 'bg-dark-card border-dark-border/80 text-gray-400 hover:border-dark-border hover:bg-dark-border/20'
-              }`}
+                }`}
             >
-              <div className={`p-2 rounded-lg border transition-colors ${
-                isActive 
-                  ? 'bg-brand text-white border-brand' 
+              <div className={`p-2 rounded-lg border transition-colors ${isActive
+                  ? 'bg-brand text-white border-brand'
                   : 'bg-dark-border text-gray-500 border-dark-border'
-              }`}>
+                }`}>
                 {getStepIcon(step.id)}
               </div>
 
@@ -163,7 +161,7 @@ export default function ProcessStepper() {
                   <span className="w-2.5 h-2.5 bg-yellow-500/80 rounded-full" />
                   <span className="w-2.5 h-2.5 bg-brand-green/80 rounded-full" />
                   <span className="text-[10px] font-mono text-gray-500 pl-4">
-                    nullifier_studio://{step.title.toLowerCase()}.log
+                    Evice_studio://{step.title.toLowerCase()}.log
                   </span>
                 </div>
                 <div className="flex items-center space-x-1">

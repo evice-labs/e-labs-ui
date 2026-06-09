@@ -17,7 +17,7 @@ const founders: TeamMember[] = [
     github: 'https://github.com/vance-cipher',
     twitter: 'https://x.com/cipher_vance',
     avatarSeed: 'AV',
-    terminalOutput: `vance@nullifier:~$ ./pda_keygen --seed "elez"
+    terminalOutput: `vance@Evice:~$ ./pda_keygen --seed "elez"
 [GEN] keypair generated in 18ms
 >> PUBLIC_ADDRESS: Nulli5bXz1V...9R0F_Live
 [OK] private metadata encrypted.`
@@ -31,7 +31,7 @@ const founders: TeamMember[] = [
     github: 'https://github.com/elena-rostova',
     twitter: 'https://x.com/elena_zkp',
     avatarSeed: 'ER',
-    terminalOutput: `elena@nullifier:~$ zkp_verifier_check --curve bn254
+    terminalOutput: `elena@Evice:~$ zkp_verifier_check --curve bn254
 [LOAD] evaluating alt_bn128 constraints...
 >> MULTIPLICATIONS: 12,940 ops verified 
 [OK] Groth16 verify_proof matching: 100% Correct`
@@ -107,7 +107,7 @@ export default function TeamSection() {
                 <Key className="w-3.5 h-3.5 text-brand" />
                 <span>SIGNATURE VERIFIED OK</span>
               </div>
-              
+
               <div className="flex items-center space-x-3 text-gray-400">
                 <a
                   href={member.github}

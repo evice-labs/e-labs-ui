@@ -14,7 +14,7 @@ const portfolioItems: PortfolioItem[] = [
     name: 'Anoma-Verifier',
     description: 'sBPF proof verification router for privacy-centric sovereign transactions.',
     status: 'Merged',
-    link: 'https://github.com/nullifier-labs/anoma-verifier',
+    link: 'https://github.com/Evice-labs/anoma-verifier',
     attribution: 'Led by Elena',
     tech: ['Rust', 'sBPF', 'Groth16', 'Logos LEZ']
   },
@@ -23,7 +23,7 @@ const portfolioItems: PortfolioItem[] = [
     name: 'PrivPDA Primitive',
     description: 'Private Program-Derived Address primitive to anchor secure state without public leaks.',
     status: 'Live on devnet',
-    link: 'https://github.com/nullifier-labs/priv-pda',
+    link: 'https://github.com/Evice-labs/priv-pda',
     attribution: 'Led by Alex',
     tech: ['Solana', 'Anchor', 'sBPF', 'Private PDA']
   },
@@ -32,8 +32,8 @@ const portfolioItems: PortfolioItem[] = [
     name: 'sBPF-Groth16 Prover',
     description: 'Fast, test-covered on-chain Groth16 verification of BN254 cryptographic proofs.',
     status: 'In review',
-    link: 'https://github.com/nullifier-labs/sbpf-groth16',
-    attribution: 'Nullifier Joint Work',
+    link: 'https://github.com/Evice-labs/sbpf-groth16',
+    attribution: 'Evice Joint Work',
     tech: ['Rust', 'RISC Zero', 'BN254', 'sBPF']
   },
   {
@@ -41,8 +41,8 @@ const portfolioItems: PortfolioItem[] = [
     name: 'λ-Shield Protocol',
     description: 'Zero-knowledge core shielded transaction layer on the Logos Execution Zone.',
     status: 'Live on mainnet',
-    link: 'https://github.com/nullifier-labs/lambda-shield',
-    attribution: 'Nullifier Joint Work',
+    link: 'https://github.com/Evice-labs/lambda-shield',
+    attribution: 'Evice Joint Work',
     tech: ['Rust', 'sBPF', 'LEZ', 'zkVM', 'λPrize Winner']
   }
 ];
@@ -82,11 +82,10 @@ export default function PortfolioGrid() {
             key={tab}
             id={`portfolio-filter-${tab}`}
             onClick={() => setFilter(tab)}
-            className={`px-3.5 py-1.5 rounded-lg text-xs font-mono tracking-tight transition-all duration-300 ${
-              filter === tab
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-mono tracking-tight transition-all duration-300 ${filter === tab
                 ? 'bg-brand text-white shadow-lg shadow-brand/20 font-medium'
                 : 'text-gray-400 hover:text-white hover:bg-dark-border/40'
-            }`}
+              }`}
           >
             {tab === 'all' && 'All Deliveries'}
             {tab === 'joint' && 'Joint Labs Work'}
