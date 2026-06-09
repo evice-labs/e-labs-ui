@@ -9,6 +9,7 @@ import {
   Terminal, ShieldCheck, Mail, ArrowUpRight, Cpu,
   GitCommit, ChevronRight, Menu, X, ArrowDown
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Sub-components
 import NetworkBackground from './components/NetworkBackground';
@@ -160,6 +161,13 @@ export default function App() {
             >
               // Team
             </button>
+            <Link
+              to="/founding-team"
+              onClick={() => setMobMenuOpen(false)}
+              className="block w-full text-left py-2 text-brand hover:text-white border-b border-dark-border/40 pb-1"
+            >
+  // Join Foundation
+            </Link>
           </nav>
 
           {/* CTA Book Call Button (desktop) */}
