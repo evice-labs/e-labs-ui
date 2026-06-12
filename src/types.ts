@@ -42,11 +42,9 @@ export interface TeamMember {
   name: string;
   role: string;
   bio: string;
-  specialty: string;
   github: string;
   twitter: string;
   avatarSeed: string;
-  terminalOutput: string;
 }
 
 export interface FAQItem {
