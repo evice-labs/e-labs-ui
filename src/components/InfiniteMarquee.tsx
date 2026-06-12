@@ -47,10 +47,10 @@ export default function InfiniteMarquee() {
                   <Icon className="w-4 h-4 text-brand group-hover:text-brand-green transition-colors duration-300" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-sm font-sans tracking-tight text-white/95 font-medium">
+                  <span className="text-sm font-sans tracking-tight text-black/95 font-medium">
                     {partner.name}
                   </span>
-                  <span className="text-[10px] font-mono uppercase text-gray-500 tracking-widest leading-none">
+                  <span className="text-[10px] font-mono uppercase text-black tracking-widest leading-none">
                     {partner.category}
                   </span>
                 </div>

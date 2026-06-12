@@ -65,13 +65,13 @@ export default function ComparisonTable() {
       <table className="w-full text-left border-collapse min-w-[620px]">
         {/* Table Header */}
         <thead>
-          <tr className="border-b border-dark-border bg-[#101012]/90 text-xs font-mono text-gray-400">
+          <tr className="border-b border-dark-border bg-[#101012]/90 text-xs font-mono text-black">
             <th className="p-4 pl-6 font-medium">Metric</th>
             <th className="p-4 font-semibold text-brand bg-brand/5 border-x border-dark-border flex items-center space-x-2">
               <ShieldCheck className="w-4 h-4 text-brand animate-pulse" />
               <span>Evice Labs</span>
             </th>
-            <th className="p-4 font-medium text-gray-500">Generalists & Agencies</th>
+            <th className="p-4 font-medium text-black">Generalists & Agencies</th>
           </tr>
         </thead>
 
@@ -87,12 +87,12 @@ export default function ComparisonTable() {
               className="border-b border-dark-border/40 hover:bg-white/[0.01] transition-all duration-200"
             >
               {/* Feature label */}
-              <td className="p-4 pl-6 text-sm font-semibold text-gray-300">
+              <td className="p-4 pl-6 text-sm font-semibold text-black">
                 {row.category}
               </td>
 
               {/* Evice column (Highlighted) */}
-              <td className="p-4 text-sm text-white font-medium bg-brand/5 border-x border-dark-border/60">
+              <td className="p-4 text-sm text-black font-medium bg-brand/5 border-x border-dark-border/60">
                 <div className="flex items-center space-x-2.5">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-brand/10 border border-brand/35 flex items-center justify-center">
                     <Check className="w-3 h-3 text-brand" />
@@ -102,7 +102,7 @@ export default function ComparisonTable() {
               </td>
 
               {/* Others column */}
-              <td className="p-4 text-sm text-gray-400">
+              <td className="p-4 text-sm text-black">
                 <div className="flex items-center space-x-2.5">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-500/5 border border-yellow-500/20 flex items-center justify-center">
                     <AlertTriangle className="w-3 h-3 text-yellow-500/60" />

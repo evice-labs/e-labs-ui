@@ -69,32 +69,12 @@ export default function PortfolioGrid() {
       case 'Merged':
         return 'bg-purple-500/10 text-purple-400 border-purple-500/20';
       default:
-        return 'bg-gray-500/10 text-gray-400 border-gray-500/20';
+        return 'bg-gray-500/10 text-black border-black/20';
     }
   };
 
   return (
     <div className="space-y-8 font-sans">
-      {/* Category Filtering Tabs */}
-      <div className="flex flex-wrap gap-2 justify-center py-2 px-3 border border-dark-border/60 bg-[#0C0C0E]/40 backdrop-blur-md rounded-xl max-w-lg mx-auto">
-        {(['all', 'joint', 'alex', 'elena'] as const).map((tab) => (
-          <button
-            key={tab}
-            id={`portfolio-filter-${tab}`}
-            onClick={() => setFilter(tab)}
-            className={`px-3.5 py-1.5 rounded-lg text-xs font-mono tracking-tight transition-all duration-300 ${filter === tab
-                ? 'bg-brand text-white shadow-lg shadow-brand/20 font-medium'
-                : 'text-gray-400 hover:text-white hover:bg-dark-border/40'
-              }`}
-          >
-            {tab === 'all' && 'All Deliveries'}
-            {tab === 'joint' && 'Joint Labs Work'}
-            {tab === 'alex' && 'Alex\'s Codebase'}
-            {tab === 'elena' && 'Elena\'s R&D'}
-          </button>
-        ))}
-      </div>
-
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <AnimatePresence mode="popLayout">
@@ -106,27 +86,27 @@ export default function PortfolioGrid() {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.35 }}
               key={item.id}
-              className="group relative flex flex-col justify-between rounded-xl border border-dark-border bg-dark-card p-6 transition-all duration-300 hover:border-brand/40 overflow-hidden"
+              className="group relative flex flex-col justify-between border border-dark-border bg-dark-card p-6 transition-all duration-300 hover:border-gray-400/40 overflow-hidden"
             >
               <div>
                 {/* Header info */}
                 <div className="flex justify-between items-start gap-4">
                   <div className="flex items-center space-x-2">
                     <GitBranch className="w-4 h-4 text-brand animate-pulse" />
-                    <span className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">
+                    <span className="text-[10px] font-mono text-black uppercase tracking-wider">
                       {item.attribution}
                     </span>
                   </div>
-                  <span className={`px-2 py-0.5 text-[10px] uppercase font-mono border rounded-sm ${getStatusStyle(item.status)}`}>
+                  <span className={`px-2 py-0.5 text-[10px] uppercase font-mono border ${getStatusStyle(item.status)}`}>
                     ● {item.status}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-white mt-4 tracking-tight group-hover:text-brand transition-colors duration-200">
+                <h3 className="text-xl font-display font-bold text-black mt-4 tracking-tight group-hover:text-brand transition-colors duration-200">
                   {item.name}
                 </h3>
 
-                <p className="text-sm text-gray-400 mt-2.5 leading-relaxed">
+                <p className="text-sm text-black mt-2.5 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -135,7 +115,7 @@ export default function PortfolioGrid() {
                 {/* Tech Badges */}
                 <div className="flex flex-wrap gap-1.5 pt-1.5">
                   {item.tech.map((t) => (
-                    <span key={t} className="bg-dark-border px-2 py-0.5 rounded text-[10px] font-mono text-gray-300 border border-dark-border/40">
+                    <span key={t} className="bg-dark-border px-2 py-0.5 text-[10px] font-mono text-black border border-dark-border/40">
                       {t}
                     </span>
                   ))}
@@ -143,14 +123,14 @@ export default function PortfolioGrid() {
 
                 {/* Redirect Trigger */}
                 <div className="flex items-center justify-between border-t border-dark-border/60 pt-4 mt-2">
-                  <span className="text-[10px] font-mono text-gray-500">
+                  <span className="text-[10px] font-mono text-black">
                     REPOSITORY VERIFIED OK
                   </span>
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1.5 text-xs text-brand hover:text-white font-mono hover:underline group-hover:translate-x-0.5 transition-all duration-200"
+                    className="inline-flex items-center space-x-1.5 text-xs text-brand hover:text-black font-mono hover:underline group-hover:translate-x-0.5 transition-all duration-200"
                   >
                     <span>View commit logs</span>
                     <ExternalLink className="w-3.5 h-3.5" />

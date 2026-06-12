@@ -114,13 +114,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             <div className="flex items-center justify-between p-5 border-b border-dark-border/60 bg-[#0c0c0e]/80">
               <div className="flex items-center space-x-2.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand animate-ping" />
-                <h3 className="text-sm font-mono uppercase tracking-widest text-white">
+                <h3 className="text-sm font-mono uppercase tracking-widest text-black">
                   Scoping Intake Loop // 01
                 </h3>
               </div>
               <button
                 onClick={onClose}
-                className="p-1 rounded-md text-gray-500 hover:text-white hover:bg-dark-border/50 transition-colors"
+                className="p-1 rounded-md text-black hover:text-black hover:bg-dark-border/50 transition-colors"
                 title="Close intake"
               >
                 <X className="w-4 h-4" />
@@ -132,13 +132,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
               {!submitting && !submitted && (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="text-xs text-gray-400 leading-relaxed mb-1">
+                  <div className="text-xs text-black leading-relaxed mb-1">
                     Complete the scoping manifest below. Our engineering desk will review and return an on-chain architectural plan.
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
                         Your Name / Alias
                       </label>
                       <input
@@ -147,11 +147,11 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         placeholder="CipherScribe"
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-hidden focus:border-brand/65 transition-colors"
+                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-black focus:outline-hidden focus:border-brand/65 transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
                         Organization / Protocol
                       </label>
                       <input
@@ -159,13 +159,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         placeholder="Logos Core Team"
                         value={formState.org}
                         onChange={(e) => setFormState({ ...formState, org: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-hidden focus:border-brand/65 transition-colors"
+                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-black focus:outline-hidden focus:border-brand/65 transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+                    <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
                       Contact Coordinate (Email or Telegram/X)
                     </label>
                     <input
@@ -174,19 +174,19 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       placeholder="telegram: @logos_dev or researcher@protocol.io"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-hidden focus:border-brand/65 transition-colors"
+                      className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-black focus:outline-hidden focus:border-brand/65 transition-colors"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
                         Target stack selection
                       </label>
                       <select
                         value={formState.architecture}
                         onChange={(e) => setFormState({ ...formState, architecture: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-hidden focus:border-brand/65 transition-colors font-mono"
+                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2.5 text-xs text-black focus:outline-hidden focus:border-brand/65 transition-colors font-mono"
                       >
                         <option value="sbpf-confidential">sBPF Confidential State</option>
                         <option value="zkvm-prover">RISC Zero zkVM Proving</option>
@@ -196,13 +196,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
                         Current Development Stage
                       </label>
                       <select
                         value={formState.stage}
                         onChange={(e) => setFormState({ ...formState, stage: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-hidden focus:border-brand/65 transition-colors font-mono"
+                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2.5 text-xs text-black focus:outline-hidden focus:border-brand/65 transition-colors font-mono"
                       >
                         <option value="spec">Spec / Outline Phase</option>
                         <option value="mvp-refit">Built MVP, needs refit</option>
@@ -213,7 +213,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+                    <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
                       Invariants, Code repos, or constraints to enforce
                     </label>
                     <textarea
@@ -221,13 +221,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       placeholder="Describe what stays private, target latency requirements, or any curve specifications..."
                       value={formState.description}
                       onChange={(e) => setFormState({ ...formState, description: e.target.value })}
-                      className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-hidden focus:border-brand/65 transition-colors font-mono leading-relaxed resize-none"
+                      className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-xs text-black focus:outline-hidden focus:border-brand/65 transition-colors font-mono leading-relaxed resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full mt-2 bg-brand hover:bg-brand/90 text-white font-mono text-xs uppercase tracking-widest py-3 rounded-lg flex items-center justify-center space-x-2.5 select-none shadow-lg shadow-brand/10 group active:scale-[0.98] transition-all duration-300"
+                    className="w-full mt-2 bg-brand hover:bg-brand/90 text-black font-mono text-xs uppercase tracking-widest py-3 rounded-lg flex items-center justify-center space-x-2.5 select-none shadow-lg shadow-brand/10 group active:scale-[0.98] transition-all duration-300"
                   >
                     <span>Initiate analysis flow</span>
                     <Send className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -249,10 +249,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   </div>
 
                   {/* Terminal logger */}
-                  <div className="p-4 bg-[#050507] rounded-lg border border-dark-border/80 font-mono text-[9px] text-gray-400 space-y-1 h-36 overflow-y-auto select-none crt-effect">
+                  <div className="p-4 bg-[#050507] rounded-lg border border-dark-border/80 font-mono text-[9px] text-black space-y-1 h-36 overflow-y-auto select-none crt-effect">
                     {logs.map((log, index) => (
                       <div key={index} className="leading-relaxed">
-                        <span className="text-gray-600 pl-1">{index + 1} &gt; </span>
+                        <span className="text-black pl-1">{index + 1} &gt; </span>
                         {log}
                       </div>
                     ))}
@@ -273,36 +273,36 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-display font-medium text-white tracking-tight">
+                    <h3 className="text-xl font-display font-medium text-black tracking-tight">
                       Specification Signed & Sealed
                     </h3>
-                    <p className="text-xs text-gray-400 mt-2 max-w-sm mx-auto leading-relaxed">
+                    <p className="text-xs text-black mt-2 max-w-sm mx-auto leading-relaxed">
                       Your proposal ticket is stamped onto our active schedule queue. Let's arrange our first developer-to-developer call.
                     </p>
                   </div>
 
                   {/* Coordinates information */}
                   <div className="p-4 bg-[#050507] rounded-lg border border-dark-border/80 font-mono text-left text-xs space-y-3 max-w-md mx-auto">
-                    <div className="flex justify-between items-center text-gray-500 border-b border-dark-border pb-1.5">
+                    <div className="flex justify-between items-center text-black border-b border-dark-border pb-1.5">
                       <span>VERIFIED TICKET</span>
                       <span className="text-brand text-[10px]">{proposalHash}</span>
                     </div>
 
-                    <div className="space-y-1.5 text-gray-300">
+                    <div className="space-y-1.5 text-black">
                       <div className="flex justify-between">
-                        <span className="text-gray-500">Scheduled:</span>
+                        <span className="text-black">Scheduled:</span>
                         <span>Next 24H Call (Reserved)</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-500">Email:</span>
+                        <span className="text-black">Email:</span>
                         <a href="mailto:hello@Evice.dev" className="text-brand hover:underline">hello@Evice.dev</a>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-500">Telegram:</span>
+                        <span className="text-black">Telegram:</span>
                         <a href="https://t.me/Evice_labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">t.me/Evice_labs</a>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-500">Calendly link:</span>
+                        <span className="text-black">Calendly link:</span>
                         <a href="https://calendly.com/Evice-labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Book immediate time slot</a>
                       </div>
                     </div>
@@ -314,7 +314,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       setLogs([]);
                       onClose();
                     }}
-                    className="px-5 py-2 text-xs font-mono text-gray-400 border border-dark-border hover:border-brand hover:text-white rounded-lg transition-colors"
+                    className="px-5 py-2 text-xs font-mono text-black border border-dark-border hover:border-brand hover:text-black rounded-lg transition-colors"
                   >
                     Close console
                   </button>
