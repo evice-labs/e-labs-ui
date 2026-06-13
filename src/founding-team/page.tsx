@@ -23,6 +23,7 @@ function Reveal({
     children: ReactNode;
     delay?: number;
     className?: string;
+    key?: string | number;
 }) {
     return (
         <motion.div
@@ -122,7 +123,7 @@ export default function FoundingTeam() {
             {/* Fixed Navigation */}
             <header className="fixed top-0 left-0 right-0 z-50 max-w-7xl mx-auto w-full border-x border-b border-dark-border bg-black h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 select-none">
                 <Link to="/" className="flex items-center cursor-pointer group">
-                    <img src="/EviceLogo.png" alt="Evice Labs Logo" className="h-6 w-auto invert transition-transform duration-200 group-hover:scale-105" />
+                    <img src={`${import.meta.env.BASE_URL}EviceLogo.png`} alt="Evice Labs Logo" className="h-6 w-auto invert transition-transform duration-200 group-hover:scale-105" />
                 </Link>
 
                 <div className="flex items-center gap-3">
@@ -477,7 +478,7 @@ export default function FoundingTeam() {
             <footer className="w-full bg-yellow-100 text-black font-sans select-none">
                 <div className="max-w-7xl mx-auto border-x border-dark-border bg-black px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center cursor-pointer group">
-                        <img src="/EviceLogo.png" alt="Evice Labs Logo" className="h-6 w-auto invert transition-transform duration-200 group-hover:scale-105" />
+                        <img src={`${import.meta.env.BASE_URL}EviceLogo.png`} alt="Evice Labs Logo" className="h-6 w-auto invert transition-transform duration-200 group-hover:scale-105" />
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-6 font-mono text-xs text-gray-400">
