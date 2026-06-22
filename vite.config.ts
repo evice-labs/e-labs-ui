@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/evice-labs-ui/',
+    base: '/e-labs-ui/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
