@@ -289,12 +289,13 @@ export default function App() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="/founding-team"
+              <Link
+                to="/founding-team"
+                onClick={() => setMobMenuOpen(false)}
                 className="w-full sm:w-auto px-7 py-3 bg-brand text-black font-mono text-xs uppercase tracking-wider shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer"
               >
                 Build with us
-              </a>
+              </Link>
               <button
                 id="hero-cta-secondary"
                 onClick={() => scrollToSection('work')}
@@ -345,7 +346,7 @@ export default function App() {
               ].map((stat) => (
                 <div
                   key={stat.id}
-                  className="p-5 -xl border border-dark-border bg-dark-card flex flex-col justify-between hover:border-gray-400/40 transition-colors duration-200"
+                  className="p-5 -xl border border-dark-border bg-dark-card flex flex-col justify-between hover:border-gray-400 transition-colors duration-200"
                 >
                   <span className="text-3xl sm:text-4xl font-display font-black text-brand tracking-tight">
                     <CountUp value={stat.val} />{stat.suffix || ''}
