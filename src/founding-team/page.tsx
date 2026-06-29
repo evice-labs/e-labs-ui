@@ -135,7 +135,9 @@ export default function FoundingTeam() {
                         Back to site
                     </Link>
                     <a
-                        href="#apply"
+                        href="https://docs.google.com/forms/d/1zSbk1g_B9DpN9oN6ca5Ib_48_aEHtFKKWxFOoOvaFq4/viewform?edit_requested=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-4 py-1.5 bg-white border border-transparent hover:bg-gray-200 text-[11px] font-mono font-medium text-black shadow-xs transition-all duration-200 active:scale-[0.98]"
                     >
                         Apply to join
@@ -176,14 +178,16 @@ export default function FoundingTeam() {
 
                         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
-                                href="#apply"
-                                className="w-full sm:w-auto px-7 py-3 bg-brand hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20 text-black font-mono text-xs uppercase tracking-wider shadow-md active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                                href="https://docs.google.com/forms/d/1zSbk1g_B9DpN9oN6ca5Ib_48_aEHtFKKWxFOoOvaFq4/viewform?edit_requested=true"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto px-7 py-3 bg-brand text-black font-mono text-xs uppercase tracking-wider shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer"
                             >
                                 Apply to join
                             </a>
                             <a
-                                href="#terms"
-                                className="w-full sm:w-auto px-7 py-3 bg-white border border-black hover:border-gray-400 text-black hover:text-gray-400 font-mono text-xs uppercase tracking-wider active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                                href="#"
+                                className="w-full sm:w-auto px-7 py-3 bg-white border border-black font-mono text-xs uppercase tracking-wider shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer"
                             >
                                 Read the terms
                             </a>
@@ -454,16 +458,18 @@ export default function FoundingTeam() {
                             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <a
                                     href="https://docs.google.com/forms/d/1zSbk1g_B9DpN9oN6ca5Ib_48_aEHtFKKWxFOoOvaFq4/viewform?edit_requested=true"
-                                    className="w-full sm:w-auto px-8 py-3.5 bg-brand hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20 font-mono text-xs uppercase tracking-widest text-black shadow-md active:scale-[0.98] transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full sm:w-auto px-8 py-3.5 bg-brand text-black font-mono text-xs uppercase tracking-widest shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2"
                                 >
                                     <Mail className="w-4 h-4" />
                                     Apply to join
                                 </a>
                                 <a
-                                    href="https://github.com/Evice-labs"
+                                    href="https://github.com/evice-labs"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full sm:w-auto px-8 py-3.5 bg-white border border-black hover:border-gray-400 text-black hover:text-gray-400 font-mono text-xs uppercase tracking-widest active:scale-[0.98] transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2"
+                                    className="w-full sm:w-auto px-8 py-3.5 bg-white border border-black text-black font-mono text-xs uppercase tracking-widest shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2"
                                 >
                                     GitHub
                                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -482,15 +488,15 @@ export default function FoundingTeam() {
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-6 font-mono text-xs text-gray-400">
-                        <a href="https://github.com/Evice-labs" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1">
+                        <a href="https://github.com/evice-labs" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1">
                             <span>GitHub</span>
                             <ArrowUpRight className="w-3 h-3" />
                         </a>
-                        <a href="https://x.com/Evice_labs" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1">
                             <span>X / Twitter</span>
                             <ArrowUpRight className="w-3 h-3" />
                         </a>
-                        <a href="mailto:hello@evice.dev" className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1">
+                        <a href="#" className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1">
                             <span>Email</span>
                             <Mail className="w-3.5 h-3.5" />
                         </a>

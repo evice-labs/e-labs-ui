@@ -291,14 +291,14 @@ export default function App() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="/founding-team"
-                className="w-full sm:w-auto px-7 py-3 bg-brand hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20 text-black font-mono text-xs uppercase tracking-wider shadow-md active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3 bg-brand text-black font-mono text-xs uppercase tracking-wider shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer"
               >
                 Build with us
               </a>
               <button
                 id="hero-cta-secondary"
                 onClick={() => scrollToSection('work')}
-                className="w-full sm:w-auto px-7 py-3 -lg bg-white border border-black hover:border-gray-400 text-black hover:text-gray-400 font-mono text-xs uppercase tracking-wider active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3 -lg bg-white border border-black text-black font-mono text-xs uppercase tracking-wider shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer"
               >
                 See our work
               </button>
@@ -339,9 +339,9 @@ export default function App() {
             <div className="lg:col-span-2 grid grid-cols-2 gap-4">
               {[
                 { id: 'prize', val: 3, label: 'λPrize submissions delivered' },
-                { id: 'rfp', val: 5, label: 'RFP proposals authored' },
+                { id: 'rfp', val: 3, label: 'RFP proposals authored' },
                 { id: 'logos', val: 100, suffix: '%', label: 'Logos-native focus' },
-                { id: 'deployed', val: 14, label: 'programs to testnet' }
+                { id: 'deployed', val: '~', label: 'programs to testnet' }
               ].map((stat) => (
                 <div
                   key={stat.id}
@@ -444,7 +444,7 @@ export default function App() {
               <button
                 id="cta-bottom-project"
                 onClick={() => setIsBookingOpen(true)}
-                className="px-8 py-3.5 -lg bg-brand hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20 font-mono text-xs uppercase tracking-widest text-black shadow-md active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                className="px-8 py-3.5 -lg bg-brand font-mono text-xs uppercase tracking-widest text-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200 cursor-pointer"
               >
                 Start a project
               </button>
@@ -472,7 +472,7 @@ export default function App() {
           {/* Core coordinate anchors */}
           <div className="flex flex-wrap justify-center gap-6 font-mono text-xs text-gray-400">
             <a
-              href="https://github.com/Evice-labs"
+              href="https://github.com/evice-labs"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1"
@@ -481,7 +481,7 @@ export default function App() {
               <ArrowUpRight className="w-3 h-3" />
             </a>
             <a
-              href="https://x.com/Evice_labs"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1"
@@ -490,7 +490,7 @@ export default function App() {
               <ArrowUpRight className="w-3 h-3" />
             </a>
             <a
-              href="mailto:hello@Evice.dev"
+              href="#"
               className="text-white hover:text-gray-400 transition-colors flex items-center space-x-1"
             >
               <span>Email</span>
