@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send, Terminal, Key, Clock, Sparkles } from 'lucide-react';
@@ -96,7 +91,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-dark-bg/85 backdrop-blur-md"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           />
 
           {/* Modal Container */}
@@ -105,22 +100,18 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-xl rounded-xl border border-dark-border bg-dark-card overflow-hidden shadow-2xl z-10"
+            className="relative w-full max-w-xl border border-black bg-[#F9F6EE] overflow-hidden z-10"
           >
-            {/* Upper grid details */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-dot-pattern opacity-10 pointer-events-none" />
-
             {/* Header */}
-            <div className="flex items-center justify-between p-5 border-b border-dark-border/60 bg-[#0c0c0e]/80">
-              <div className="flex items-center space-x-2.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand animate-ping" />
-                <h3 className="text-sm font-mono uppercase tracking-widest text-black">
+            <div className="flex items-center justify-between p-5 border-b border-black bg-yellow-100">
+              <div className="flex items-center space-x-2.5 pl-1.5">
+                <h3 className="text-xs font-mono uppercase tracking-widest text-black font-semibold">
                   Scoping Intake Loop // 01
                 </h3>
               </div>
               <button
                 onClick={onClose}
-                className="p-1 rounded-md text-black hover:text-black hover:bg-dark-border/50 transition-colors"
+                className="p-1 text-black hover:bg-black/5 transition-colors border border-transparent hover:border-black"
                 title="Close intake"
               >
                 <X className="w-4 h-4" />
@@ -131,14 +122,14 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             <div className="p-6 overflow-y-auto max-h-[82vh] font-sans">
 
               {!submitting && !submitted && (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="text-xs text-black leading-relaxed mb-1">
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="text-sm text-black leading-relaxed mb-2">
                     Complete the scoping manifest below. Our engineering desk will review and return an on-chain architectural plan.
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5 font-semibold">
                         Your Name / Alias
                       </label>
                       <input
@@ -147,11 +138,11 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         placeholder="CipherScribe"
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-black focus:outline-hidden focus:border-brand/65 transition-colors"
+                        className="w-full bg-white border border-black px-3.5 py-2.5 text-sm text-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5 font-semibold">
                         Organization / Protocol
                       </label>
                       <input
@@ -159,13 +150,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         placeholder="Logos Core Team"
                         value={formState.org}
                         onChange={(e) => setFormState({ ...formState, org: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-black focus:outline-hidden focus:border-brand/65 transition-colors"
+                        className="w-full bg-white border border-black px-3.5 py-2.5 text-sm text-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
+                    <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5 font-semibold">
                       Contact Coordinate (Email or Telegram/X)
                     </label>
                     <input
@@ -174,19 +165,19 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       placeholder="telegram: @logos_dev or researcher@protocol.io"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-sm text-black focus:outline-hidden focus:border-brand/65 transition-colors"
+                      className="w-full bg-white border border-black px-3.5 py-2.5 text-sm text-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5 font-semibold">
                         Target stack selection
                       </label>
                       <select
                         value={formState.architecture}
                         onChange={(e) => setFormState({ ...formState, architecture: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2.5 text-xs text-black focus:outline-hidden focus:border-brand/65 transition-colors font-mono"
+                        className="w-full bg-white border border-black px-3.5 py-2.5 text-xs text-black focus:outline-none focus:ring-1 focus:ring-black transition-colors font-mono"
                       >
                         <option value="sbpf-confidential">sBPF Confidential State</option>
                         <option value="zkvm-prover">RISC Zero zkVM Proving</option>
@@ -196,13 +187,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5 font-semibold">
                         Current Development Stage
                       </label>
                       <select
                         value={formState.stage}
                         onChange={(e) => setFormState({ ...formState, stage: e.target.value })}
-                        className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2.5 text-xs text-black focus:outline-hidden focus:border-brand/65 transition-colors font-mono"
+                        className="w-full bg-white border border-black px-3.5 py-2.5 text-xs text-black focus:outline-none focus:ring-1 focus:ring-black transition-colors font-mono"
                       >
                         <option value="spec">Spec / Outline Phase</option>
                         <option value="mvp-refit">Built MVP, needs refit</option>
@@ -213,7 +204,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5">
+                    <label className="block text-[10px] font-mono text-black uppercase tracking-widest mb-1.5 font-semibold">
                       Invariants, Code repos, or constraints to enforce
                     </label>
                     <textarea
@@ -221,38 +212,38 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       placeholder="Describe what stays private, target latency requirements, or any curve specifications..."
                       value={formState.description}
                       onChange={(e) => setFormState({ ...formState, description: e.target.value })}
-                      className="w-full bg-[#08080A]/80 border border-dark-border/80 rounded-lg px-3.5 py-2 text-xs text-black focus:outline-hidden focus:border-brand/65 transition-colors font-mono leading-relaxed resize-none"
+                      className="w-full bg-white border border-black px-3.5 py-2.5 text-sm text-black focus:outline-none focus:ring-1 focus:ring-black transition-colors leading-relaxed resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full mt-2 bg-brand hover:bg-brand/90 text-black font-mono text-xs uppercase tracking-widest py-3 rounded-lg flex items-center justify-center space-x-2.5 select-none shadow-lg shadow-brand/10 group active:scale-[0.98] transition-all duration-300"
+                    className="w-full mt-4 bg-brand hover:bg-brand/90 text-black border border-black font-mono text-xs uppercase tracking-widest py-3 flex items-center justify-center space-x-2.5 select-none shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-[0.98] transition-all duration-200"
                   >
-                    <span>Initiate analysis flow</span>
-                    <Send className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    <span className="font-bold">Initiate analysis flow</span>
+                    <Send className="w-3.5 h-3.5" />
                   </button>
                 </form>
               )}
 
               {/* Submitting Console Diagnostics state */}
               {submitting && (
-                <div className="space-y-4 py-8">
-                  <div className="flex flex-col items-center justify-center space-y-3">
-                    <div className="relative w-12 h-12 flex items-center justify-center text-brand">
-                      <div className="absolute inset-0 border-2 border-brand/20 rounded-full animate-spin border-t-brand" />
-                      <Clock className="w-5 h-5 text-brand" />
+                <div className="space-y-6 py-10">
+                  <div className="flex flex-col items-center justify-center space-y-4">
+                    <div className="relative w-12 h-12 flex items-center justify-center text-black">
+                      <div className="absolute inset-0 border-2 border-black border-t-brand animate-spin" />
+                      <Clock className="w-5 h-5 text-black" />
                     </div>
-                    <span className="text-xs font-mono text-brand animate-pulse uppercase tracking-wider">
+                    <span className="text-xs font-mono text-black font-bold uppercase tracking-wider">
                       Analyzing constraint invariants... {(consoleStep * 20)}%
                     </span>
                   </div>
 
                   {/* Terminal logger */}
-                  <div className="p-4 bg-[#050507] rounded-lg border border-dark-border/80 font-mono text-[9px] text-black space-y-1 h-36 overflow-y-auto select-none crt-effect">
+                  <div className="p-5 bg-black border border-black font-mono text-[10px] text-brand space-y-1.5 h-40 overflow-y-auto select-none shadow-[6px_6px_0_0_rgba(200,200,200,1)]">
                     {logs.map((log, index) => (
                       <div key={index} className="leading-relaxed">
-                        <span className="text-black pl-1">{index + 1} &gt; </span>
+                        <span className="text-brand/50 pl-1">{index + 1} &gt; </span>
                         {log}
                       </div>
                     ))}
@@ -265,45 +256,45 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="space-y-6 text-center py-6"
+                  className="space-y-8 text-center py-8"
                 >
-                  <div className="inline-flex p-3 rounded-full bg-brand-green/10 border border-brand-green/20 text-brand-green relative">
+                  <div className="inline-flex p-4 border border-black bg-brand/20 text-black relative shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
                     <Sparkles className="w-6 h-6" />
-                    <span className="absolute top-0 right-0 w-2 h-2 bg-brand-green rounded-full animate-ping" />
+                    <span className="absolute -top-1 -right-1 w-3 h-3 border border-black bg-brand animate-ping" />
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-display font-medium text-black tracking-tight">
+                    <h3 className="text-2xl font-display font-extrabold text-black tracking-tight">
                       Specification Signed & Sealed
                     </h3>
-                    <p className="text-xs text-black mt-2 max-w-sm mx-auto leading-relaxed">
+                    <p className="text-sm text-black mt-3 max-w-sm mx-auto leading-relaxed font-medium">
                       Your proposal ticket is stamped onto our active schedule queue. Let's arrange our first developer-to-developer call.
                     </p>
                   </div>
 
                   {/* Coordinates information */}
-                  <div className="p-4 bg-[#050507] rounded-lg border border-dark-border/80 font-mono text-left text-xs space-y-3 max-w-md mx-auto">
-                    <div className="flex justify-between items-center text-black border-b border-dark-border pb-1.5">
-                      <span>VERIFIED TICKET</span>
-                      <span className="text-brand text-[10px]">{proposalHash}</span>
+                  <div className="p-5 bg-white border border-black font-mono text-left text-xs space-y-4 max-w-md mx-auto shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
+                    <div className="flex justify-between items-center text-black border-b border-black pb-2">
+                      <span className="font-bold">VERIFIED TICKET</span>
+                      <span className="font-bold bg-black text-white px-2 py-0.5">{proposalHash}</span>
                     </div>
 
-                    <div className="space-y-1.5 text-black">
+                    <div className="space-y-2.5 text-black">
                       <div className="flex justify-between">
-                        <span className="text-black">Scheduled:</span>
+                        <span className="font-semibold">Scheduled:</span>
                         <span>Next 24H Call (Reserved)</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-black">Email:</span>
-                        <a href="mailto:hello@Evice.dev" className="text-brand hover:underline">hello@Evice.dev</a>
+                        <span className="font-semibold">Email:</span>
+                        <a href="mailto:hello@evice.dev" className="underline hover:text-brand transition-colors">hello@evice.dev</a>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-black">Telegram:</span>
-                        <a href="https://t.me/Evice_labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">t.me/Evice_labs</a>
+                        <span className="font-semibold">Telegram:</span>
+                        <a href="https://t.me/evice_labs" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand transition-colors">t.me/evice_labs</a>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-black">Calendly link:</span>
-                        <a href="https://calendly.com/Evice-labs" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Book immediate time slot</a>
+                      <div className="flex justify-between mt-2 pt-2 border-t border-black/10">
+                        <span className="font-semibold">Calendly link:</span>
+                        <a href="https://calendly.com/evice-labs" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-brand transition-colors">Book immediate time slot</a>
                       </div>
                     </div>
                   </div>
@@ -314,7 +305,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       setLogs([]);
                       onClose();
                     }}
-                    className="px-5 py-2 text-xs font-mono text-black border border-dark-border hover:border-brand hover:text-black rounded-lg transition-colors"
+                    className="mt-4 px-6 py-2.5 text-xs font-mono font-bold text-black border border-black hover:bg-black hover:text-white transition-colors"
                   >
                     Close console
                   </button>
